@@ -1,7 +1,7 @@
 #ifndef _THUG_H_
 #define _THUG_H_
 
-#include "BaseMonster.h"
+#include "BaseMonster.h"//
 #include "cocos2d.h"
 USING_NS_CC;
 
