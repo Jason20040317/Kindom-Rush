@@ -1,0 +1,7 @@
+项目时间安排
+12.24之前完成pc端的程序
+12.31之前实现移植安卓、ios
+具体分工（根据各个模块的预估代码量，三人均分）
+杨英凡：Scene、Soldier、Sprite
+卢奕人：Data、Map、Tower
+李俊旻：Bullet、Layer、monster、Road
