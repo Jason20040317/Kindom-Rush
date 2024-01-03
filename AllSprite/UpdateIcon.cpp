@@ -1,7 +1,7 @@
 #include "UpdateIcon.h"
 
 USING_NS_CC;
-
+//升级图标
 bool UpdateIcon::init()
 {
 	if (!Sprite::init())
