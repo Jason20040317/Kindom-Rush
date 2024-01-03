@@ -10,7 +10,7 @@
 MapFlag::~MapFlag(){}
 
 MapFlag::MapFlag(){}
-
+//æ ¹æ®æ˜Ÿçº§ä¸åŒæ˜¾ç¤ºæ¯ä¸ªå…³å¡
 bool MapFlag::initWithLevel(int level)
 {
 	instance = GameManager::getInstance();
@@ -21,15 +21,15 @@ bool MapFlag::initWithLevel(int level)
 	}
 	switch (UserDefault::getInstance()->getIntegerForKey(String::createWithFormat(instance->LEVELX_STARNUM,getLevel())->getCString(),0))
 	{
-	case(0)://µÃÐÇ¸öÊýÎª0£¬ÎªÍê³É
+	case(0)://å¾—æ˜Ÿä¸ªæ•°ä¸º0ï¼Œä¸ºå®Œæˆ
 		setType(0);
 		flag = Sprite::createWithSpriteFrameName("mapFlag_0022.png");
 		break;
-	case(4)://µÃÐÇ¸öÊýÎª4
+	case(4)://å¾—æ˜Ÿä¸ªæ•°ä¸º4
 		setType(2);
 		flag = Sprite::createWithSpriteFrameName("mapFlag_0112.png");
 		break;
-	case(5)://µÃÐÇ¸öÊýÎª5
+	case(5)://å¾—æ˜Ÿä¸ªæ•°ä¸º5
 		setType(3);
 		wings = Sprite::createWithSpriteFrameName("mapFlag_wings_0015.png");
 		addChild(wings);
@@ -62,12 +62,11 @@ void MapFlag::onTouchEnded(Touch* touch, Event* event)
 		case(0):
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0022.png"));
 			break;
-		case(2)://µÃÐÇ¸öÊýÎª4
+		case(2)://å¾—æ˜Ÿä¸ªæ•°ä¸º4
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0112.png"));
 			break;
-		case(3)://µÃÐÇ¸öÊýÎª5
+		case(3)://å¾—æ˜Ÿä¸ªæ•°ä¸º5
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0112.png"));
-
 			break;
 		default:
 			break;
@@ -93,10 +92,10 @@ bool MapFlag::onTouchBegan(Touch* touch, Event* event)
 		case(0):
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0023.png"));
 			break;
-		case(2)://µÃÐÇ¸öÊýÎª4
+		case(2)://å¾—æ˜Ÿä¸ªæ•°ä¸º4
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0117.png"));
 			break;
-		case(3)://µÃÐÇ¸öÊýÎª5
+		case(3)://å¾—æ˜Ÿä¸ªæ•°ä¸º5
 			flag->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("mapFlag_0117.png"));
 
 			break;
@@ -186,11 +185,11 @@ void MapFlag::addStar()
 		}
 	}
 }
-
+//èƒœåˆ©åŠ¨ç”»
 void MapFlag::startSuccessAnimation()
 {
 
-	//²¥·Å¶¯»­
+	//æ’­æ”¾åŠ¨ç”»
 	flag->runAction(Sequence::create(Animate::create(AnimationCache::getInstance()->getAnimation("succeed")),
 		CallFunc::create(this,callfunc_selector(MapFlag::starAnimation)),NULL));
 	setType(1);
