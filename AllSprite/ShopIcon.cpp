@@ -1,5 +1,5 @@
 #include "ShopIcon.h"
-
+//初始化商店
 bool ShopIcon::initIcon(int type)
 {
 	if (!Sprite::init())
